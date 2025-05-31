@@ -1,0 +1,21 @@
+{
+	"id": "ec3a26f1-529c-4b4f-86dd-b54ee2ee878f",
+	"name": "Local SWAPI",
+	"values": [
+		{
+			"key": "baseUrl",
+			"value": "\thttps://swapi.dev/api",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "personId",
+			"value": "1",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2025-05-31T17:34:07.590Z",
+	"_postman_exported_using": "Postman/11.46.5"
+}

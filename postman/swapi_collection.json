@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "e4d27c11-a73a-4873-b70f-9d0be8e0059b",
+		"name": "SWAPI Tests",
+		"description": "Tests for Star Wars API using Postman and Newman.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "673903"
+	},
+	"item": [
+		{
+			"name": "GET - People by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body contains name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.exist;\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/people/{{personId}}/\n\n",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"people",
+						"{{personId}}",
+						"\n\n"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
