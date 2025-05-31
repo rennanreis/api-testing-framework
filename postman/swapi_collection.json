@@ -34,16 +34,21 @@
 			],
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "{{baseUrl}}/people/{{personId}}/\n\n",
+					"raw": "{{baseUrl}}/people/{{personId}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
 						"people",
-						"{{personId}}",
-						"\n\n"
+						"{{personId}}"
 					]
 				}
 			},
