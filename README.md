@@ -2,7 +2,7 @@
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
 ![Status: Portfolio](https://img.shields.io/badge/status-portfolio-blue)
-![Last Update](https://img.shields.io/badge/last%20update-May%202025-brightgreen)
+![Last Update](https://img.shields.io/badge/last%20update-June%202025-brightgreen)
 
 > ⚠️ This project is part of a personal portfolio and is not open to external contributions (pull requests or issues) at this time.
 
@@ -47,34 +47,55 @@ api-testing-framework/
 
 ## ✅ Test Scenarios
 
-| Endpoint                     | Method | Description             | Status |
-|-----------------------------|--------|-------------------------|--------|
-| `/people/{{personId}}`      | GET    | Fetch person by ID      | ✅     |
+| Resource    | Type        | Scenario Description                                  | Status |
+|-------------|-------------|--------------------------------------------------------|--------|
+| People      | Positive    | GET by valid ID (`/people/1`)                         | ✅     |
+|             | Negative    | GET by invalid ID (`/people/9999`)                    | ✅     |
+|             | Negative    | GET with invalid format (`/people/abc`)               | ✅     |
+|             | Chaining    | GET homeworld by URL from person                      | ✅     |
+|             | Chaining    | GET starship by URL from person                       | ✅     |
+| Planets     | Positive    | GET by valid ID (`/planets/1`)                        | ✅     |
+|             | Negative    | GET by invalid ID (`/planets/9999`)                   | ✅     |
+|             | Negative    | GET with invalid format (`/planets/null`)             | ✅     |
+| Films       | Positive    | GET by valid ID (`/films/1`)                          | ✅     |
+|             | Negative    | GET by invalid ID (`/films/9999`)                     | ✅     |
+|             | Negative    | GET with invalid format (`/films/!@#`)                | ✅     |
+| Starships   | Positive    | GET by valid ID (`/starships/9`)                      | ✅     |
+|             | Negative    | GET by invalid ID (`/starships/9999`)                 | ✅     |
+|             | Chaining    | GET starship from people endpoint                     | ✅     |
+| Vehicles    | Positive    | GET by valid ID (`/vehicles/4`)                       | ✅     |
+|             | Negative    | GET by invalid ID (`/vehicles/9999`)                  | ✅     |
+| Species     | Positive    | GET by valid ID (`/species/1`)                        | ✅     |
+|             | Negative    | GET by invalid ID (`/species/9999`)                   | ✅     |
 
-> Additional endpoints (planets, films, vehicles) can be added as the project evolves.
+> Simulated POST, PUT, DELETE and advanced chaining scenarios will be added next.
 
 ---
 
 ## 🧠 Project Highlights
 
-- Clean and structured Postman collection
-- Use of environments to support flexible configuration
-- Newman integration for automated CLI execution
+- Clean and modular Postman collection organized by resource
+- Use of environments with dynamic variables for flexible configuration
+- Coverage for happy path, invalid IDs, and malformed parameters
+- Chaining of related resources using data from previous responses
+- Newman integration for CLI-based test execution
 - HTML report generation with `newman-reporter-html`
-- Manual override of headers to bypass API restrictions
-- Versioned and commit-organized using Conventional Commits
-- Optimized for clarity in QA portfolios and technical articles
+- Test naming and commit history follow Conventional Commits
+- README and test structure optimized for QA portfolios and articles
 
 ---
 
 ## 📌 Roadmap & Status
 
-- ✅ Collection created and tested in Postman  
-- ✅ Environment configuration standardized  
-- ✅ CLI execution with Newman working  
-- ✅ HTML reports exported and versioned  
-- 🔄 Next: add coverage for additional endpoints (planets, films, etc)  
-- 🔄 Optional: integrate with CI tools (e.g., GitHub Actions)
+- ✅ Postman collection created and organized
+- ✅ Test coverage for all primary SWAPI resources (`GET`)
+- ✅ Negative tests for invalid IDs and malformed inputs
+- ✅ Chaining between people, homeworlds, and starships
+- ✅ Newman execution and HTML reporting in place
+- ✅ README fully documented with project context
+- 🔄 Next: implement simulated POST, PUT, DELETE requests (mock)
+- 🔄 Next: advanced chaining with species and film characters
+- 🔄 Final step: GitHub Actions CI/CD integration
 
 ---
 
