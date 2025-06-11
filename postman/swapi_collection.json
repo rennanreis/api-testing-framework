@@ -17,6 +17,12 @@
 							"var jsonData = pm.response.json();\r",
 							"pm.environment.set(\"homeworldUrl\", jsonData.homeworld);\r",
 							"\r",
+							"if (jsonData.starships && jsonData.starships.length > 0) {\r",
+							"    pm.environment.set(\"chainedStarshipUrl\", jsonData.starships[0]);\r",
+							"} else {\r",
+							"    pm.environment.unset(\"chainedStarshipUrl\");\r",
+							"}\r",
+							"\r",
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
@@ -206,6 +212,45 @@
 					"path": [
 						"starships",
 						"{{starshipId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Starship by Chained URL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body contains name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.exist;\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{chainedStarshipUrl}}",
+					"host": [
+						"{{chainedStarshipUrl}}"
 					]
 				}
 			},
