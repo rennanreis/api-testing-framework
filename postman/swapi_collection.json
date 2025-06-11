@@ -53,6 +53,59 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "GET - Planet by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body contains name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.exist;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body contains climate\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.climate).to.exist;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/planets/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"planets",
+						"1"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
