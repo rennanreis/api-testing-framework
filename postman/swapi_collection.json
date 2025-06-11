@@ -108,6 +108,59 @@
 			"response": []
 		},
 		{
+			"name": "GET - Film by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body contains title\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.title).to.exist;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body contains director\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.director).to.exist;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/films/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"films",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GET - Planet by Invalid ID",
 			"event": [
 				{
