@@ -33,13 +33,31 @@
 			"enabled": true
 		},
 		{
+			"key": "vehicleId ",
+			"value": "4",
+			"type": "default",
+			"enabled": true
+		},
+		{
 			"key": "homeworldUrl",
-			"value": "https://swapi.py4e.com/api/planets/1/",
+			"value": "",
 			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "chainedStarshipUrl",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "vehicleIdTest",
+			"value": "2",
+			"type": "default",
 			"enabled": true
 		}
 	],
 	"_postman_variable_scope": "environment",
-	"_postman_exported_at": "2025-06-11T22:21:49.905Z",
-	"_postman_exported_using": "Postman/11.49.0"
+	"_postman_exported_at": "2025-06-11T22:48:11.206Z",
+	"_postman_exported_using": "Postman/11.49.2"
 }
