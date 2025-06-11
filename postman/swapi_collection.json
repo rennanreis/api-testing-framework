@@ -271,6 +271,38 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "GET - Planet by Invalid Format (null)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404 or 400\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([404, 400]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/planets/null",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"planets",
+								"null"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
