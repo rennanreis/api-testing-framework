@@ -164,6 +164,54 @@
 			"response": []
 		},
 		{
+			"name": "GET - Starship by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body contains name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.exist;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body contains model\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.model).to.exist;\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/starships/{{starshipId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"starships",
+						"{{starshipId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GET - Film by Invalid ID",
 			"event": [
 				{
