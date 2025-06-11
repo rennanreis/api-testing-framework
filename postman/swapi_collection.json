@@ -344,6 +344,44 @@
 			"response": []
 		},
 		{
+			"name": "GET - Vehicle by Invalid ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/vehicles/9999",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"vehicles",
+						"9999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GET - Starship by Invalid ID",
 			"event": [
 				{
