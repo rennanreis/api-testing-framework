@@ -98,13 +98,13 @@
 					}
 				],
 				"url": {
-					"raw": "{{baseUrl}}/planets/1",
+					"raw": "{{baseUrl}}/planets/{{planetId}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
 						"planets",
-						"1"
+						"{{planetId}}"
 					]
 				}
 			},
@@ -151,13 +151,13 @@
 					}
 				],
 				"url": {
-					"raw": "{{baseUrl}}/films/1",
+					"raw": "{{baseUrl}}/films/{{filmId}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
 						"films",
-						"1"
+						"{{filmId}}"
 					]
 				}
 			},
