@@ -8,566 +8,596 @@
 	},
 	"item": [
 		{
-			"name": "GET - People by ID",
-			"event": [
+			"name": "People",
+			"item": [
 				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"var jsonData = pm.response.json();\r",
-							"pm.environment.set(\"homeworldUrl\", jsonData.homeworld);\r",
-							"\r",
-							"if (jsonData.starships && jsonData.starships.length > 0) {\r",
-							"    pm.environment.set(\"chainedStarshipUrl\", jsonData.starships[0]);\r",
-							"} else {\r",
-							"    pm.environment.unset(\"chainedStarshipUrl\");\r",
-							"}\r",
-							"\r",
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Response time is less than 500ms\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body contains name\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.name).to.exist;\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "User-Agent",
-						"value": "Mozilla/5.0",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/people/{{personId}}",
-					"host": [
-						"{{baseUrl}}"
+					"name": "GET - People by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"pm.environment.set(\"homeworldUrl\", jsonData.homeworld);\r",
+									"\r",
+									"if (jsonData.starships && jsonData.starships.length > 0) {\r",
+									"    pm.environment.set(\"chainedStarshipUrl\", jsonData.starships[0]);\r",
+									"} else {\r",
+									"    pm.environment.unset(\"chainedStarshipUrl\");\r",
+									"}\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.name).to.exist;\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
 					],
-					"path": [
-						"people",
-						"{{personId}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET - Planet by ID",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Response time is less than 500ms\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body contains name\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.name).to.exist;\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body contains climate\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.climate).to.exist;\r",
-							"});\r",
-							""
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0",
+								"type": "text"
+							}
 						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "User-Agent",
-						"value": "Mozilla/5.0",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/planets/{{planetId}}",
-					"host": [
-						"{{baseUrl}}"
+						"url": {
+							"raw": "{{baseUrl}}/people/{{personId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"people",
+								"{{personId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " GET – Homeworld by URL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.name).to.exist;\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
 					],
-					"path": [
-						"planets",
-						"{{planetId}}"
-					]
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{homeworldUrl}}",
+							"host": [
+								"{{homeworldUrl}}"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "GET - Film by ID",
-			"event": [
+			"name": "Planets",
+			"item": [
 				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Response time is less than 500ms\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body contains title\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.title).to.exist;\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body contains director\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.director).to.exist;\r",
-							"});\r",
-							""
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "User-Agent",
-						"value": "Mozilla/5.0",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/films/{{filmId}}",
-					"host": [
-						"{{baseUrl}}"
+					"name": "GET - Planet by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.name).to.exist;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains climate\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.climate).to.exist;\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
 					],
-					"path": [
-						"films",
-						"{{filmId}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET - Vehicle by ID",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body contains name\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.name).to.exist;\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body contains model\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.model).to.exist;\r",
-							"}); "
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0",
+								"type": "text"
+							}
 						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "User-Agent",
-						"value": "Mozilla/5.0",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/vehicles/{{vehicleId }}",
-					"host": [
-						"{{baseUrl}}"
+						"url": {
+							"raw": "{{baseUrl}}/planets/{{planetId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"planets",
+								"{{planetId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Planet by Invalid ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
 					],
-					"path": [
-						"vehicles",
-						"{{vehicleId }}"
-					]
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/planets/9999",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"planets",
+								"9999"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "GET - Starship by ID",
-			"event": [
+			"name": "Films",
+			"item": [
 				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body contains name\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.name).to.exist;\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body contains model\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.model).to.exist;\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "User-Agent",
-						"value": "Mozilla/5.0",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/starships/{{starshipId}}",
-					"host": [
-						"{{baseUrl}}"
+					"name": "GET - Film by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains title\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.title).to.exist;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains director\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.director).to.exist;\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
 					],
-					"path": [
-						"starships",
-						"{{starshipId}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET - Starship by Chained URL",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body contains name\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.name).to.exist;\r",
-							"});"
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0",
+								"type": "text"
+							}
 						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "User-Agent",
-						"value": "Mozilla/5.0",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{chainedStarshipUrl}}",
-					"host": [
-						"{{chainedStarshipUrl}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET - Film by Invalid ID",
-			"event": [
+						"url": {
+							"raw": "{{baseUrl}}/films/{{filmId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"films",
+								"{{filmId}}"
+							]
+						}
+					},
+					"response": []
+				},
 				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 404\", function () {\r",
-							"    pm.response.to.have.status(404);\r",
-							"});\r",
-							""
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "User-Agent",
-						"value": "Mozilla/5.0",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/films/9999",
-					"host": [
-						"{{baseUrl}}"
+					"name": "GET - Film by Invalid ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
 					],
-					"path": [
-						"films",
-						"9999"
-					]
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/films/9999",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"films",
+								"9999"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "GET - Vehicle by Invalid ID",
-			"event": [
+			"name": "Starships",
+			"item": [
 				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 404\", function () {\r",
-							"    pm.response.to.have.status(404);\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "User-Agent",
-						"value": "Mozilla/5.0",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/vehicles/9999",
-					"host": [
-						"{{baseUrl}}"
+					"name": "GET - Starship by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.name).to.exist;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains model\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.model).to.exist;\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
 					],
-					"path": [
-						"vehicles",
-						"9999"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET - Starship by Invalid ID",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 404\", function () {\r",
-							"    pm.response.to.have.status(404);\r",
-							"});"
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0",
+								"type": "text"
+							}
 						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "User-Agent",
-						"value": "Mozilla/5.0",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/starships/9999",
-					"host": [
-						"{{baseUrl}}"
+						"url": {
+							"raw": "{{baseUrl}}/starships/{{starshipId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"starships",
+								"{{starshipId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Starship by Invalid ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
 					],
-					"path": [
-						"starships",
-						"9999"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET - Planet by Invalid ID",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 404\", function () {\r",
-							"    pm.response.to.have.status(404);\r",
-							"});"
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0",
+								"type": "text"
+							}
 						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "User-Agent",
-						"value": "Mozilla/5.0",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/planets/9999",
-					"host": [
-						"{{baseUrl}}"
+						"url": {
+							"raw": "{{baseUrl}}/starships/9999",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"starships",
+								"9999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Starship by Chained URL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.name).to.exist;\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
 					],
-					"path": [
-						"planets",
-						"9999"
-					]
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{chainedStarshipUrl}}",
+							"host": [
+								"{{chainedStarshipUrl}}"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": " GET – Homeworld by URL",
-			"event": [
+			"name": "Vehicles",
+			"item": [
 				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body contains name\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.name).to.exist;\r",
-							"});\r",
-							""
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{homeworldUrl}}",
-					"host": [
-						"{{homeworldUrl}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET - Species by ID",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Response time is less than 500ms\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body contains name\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.name).to.exist;\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body contains classification\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.classification).to.exist;\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{baseUrl}}/species/{{speciesId}}",
-					"host": [
-						"{{baseUrl}}"
+					"name": "GET - Vehicle by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.name).to.exist;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains model\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.model).to.exist;\r",
+									"}); "
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
 					],
-					"path": [
-						"species",
-						"{{speciesId}}"
-					]
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/vehicles/{{vehicleId }}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicles",
+								"{{vehicleId }}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Vehicle by Invalid ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/vehicles/9999",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicles",
+								"9999"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "GET - Species by Invalid ID",
-			"event": [
+			"name": "Species",
+			"item": [
 				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 404\", function () {\r",
-							"    pm.response.to.have.status(404);\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{baseUrl}}/species/9999",
-					"host": [
-						"{{baseUrl}}"
+					"name": "GET - Species by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.name).to.exist;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains classification\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.classification).to.exist;\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
 					],
-					"path": [
-						"species",
-						"9999"
-					]
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/species/{{speciesId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"species",
+								"{{speciesId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Species by Invalid ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/species/9999",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"species",
+								"9999"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
