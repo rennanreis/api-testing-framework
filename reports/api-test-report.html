@@ -28,21 +28,21 @@
     <div class="row">
         <div class="col-md-3">Collection</div><div class="col-md-9">SWAPI Tests</div>
         <div class="col-md-3">Description</div><div class="col-md-9">Tests for Star Wars API using Postman and Newman.&nbsp;</div>
-        <div class="col-md-3">Time</div><div class="col-md-9">Sat May 31 2025 15:10:43 GMT-0300 (Horário Padrão de Brasília)</div>
+        <div class="col-md-3">Time</div><div class="col-md-9">Thu Jun 12 2025 20:05:05 GMT-0300 (Horário Padrão de Brasília)</div>
         <div class="col-md-3">Exported with</div><div class="col-md-9">Newman v6.2.1</div>
         <div class="col-md-12">&nbsp;</div>
         <div class="col-md-4">&nbsp;</div><div class="col-md-4"><strong>Total</strong></div><div class="col-md-4"><strong>Failed</strong></div>
 
           <div class="col-md-4">Iterations</div><div class="col-md-4">1</div><div class="col-md-4">0</div>
-          <div class="col-md-4">Requests</div><div class="col-md-4">1</div><div class="col-md-4">0</div>
+          <div class="col-md-4">Requests</div><div class="col-md-4">25</div><div class="col-md-4">0</div>
           <div class="col-md-4">Prerequest Scripts</div><div class="col-md-4">0</div><div class="col-md-4">0</div>
-          <div class="col-md-4">Test Scripts</div><div class="col-md-4">1</div><div class="col-md-4">0</div>
-          <div class="col-md-4">Assertions</div><div class="col-md-4">3</div><div class="col-md-4">0</div>
+          <div class="col-md-4">Test Scripts</div><div class="col-md-4">24</div><div class="col-md-4">0</div>
+          <div class="col-md-4">Assertions</div><div class="col-md-4">43</div><div class="col-md-4">0</div>
 
         <div class="col-md-12">&nbsp;</div>
-        <div class="col-md-6">Total run duration</div><div class="col-md-6">378ms</div>
-        <div class="col-md-6">Total data received</div><div class="col-md-6">774B (approx)</div>
-        <div class="col-md-6">Average response time</div><div class="col-md-6">288ms</div>
+        <div class="col-md-6">Total run duration</div><div class="col-md-6">12.9s</div>
+        <div class="col-md-6">Total data received</div><div class="col-md-6">13.13KB (approx)</div>
+        <div class="col-md-6">Average response time</div><div class="col-md-6">429ms</div>
 
         <div class="col-md-12">&nbsp;</div>
         <div class="col-md-3"><strong>Total Failures</strong></div><div class="col-md-6"><strong>0</strong></div>
@@ -50,44 +50,993 @@
 
     <br/><h4>Requests</h4>
 
-                <div class="panel-group" id="collapse-request-5e930c52-f34f-4837-b736-269d510b734b" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="requestHead-5e930c52-f34f-4837-b736-269d510b734b">
-                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-5e930c52-f34f-4837-b736-269d510b734b" aria-controls="collapseOne">GET - People by ID</a></h4>
-                        </div>
-        
-                        <div id="requestData-5e930c52-f34f-4837-b736-269d510b734b" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-5e930c52-f34f-4837-b736-269d510b734b">
-                            <div class="panel-body">
-        
-                                    <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
-                                    <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/people/1" target="_blank">https://swapi.py4e.com/api/people/1</a></div>
-        
-                                <div class="col-md-12">&nbsp;</div>
-        
-                                <div class="col-md-12">&nbsp;</div>
-                                <div class="col-md-4">Mean time per request</div><div class="col-md-8">288ms</div><br/>
-                                <div class="col-md-4">Mean size per request</div><div class="col-md-8">774B</div><br/>
-        
-                                <div class="col-md-12">&nbsp;</div>
-                                <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">3</div>
-                                <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
-        
-                                <div class="col-md-12">&nbsp;</div>
-                                <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
-        
+        <div class="panel-group" id="collapse-folder-184d9b73-00f3-42e6-8661-ef5119d872b3" role="tablist" aria-multiselectable="true">
+            <div role="tab" id="folderHead-184d9b73-00f3-42e6-8661-ef5119d872b3">
+                <h4 style="font-size: 18px;" class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#folderData-184d9b73-00f3-42e6-8661-ef5119d872b3" aria-controls="collapseOne"><strong>People</strong></a></h4>
+            </div>
+            <br/>
+            <div id="folderData-184d9b73-00f3-42e6-8661-ef5119d872b3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="folderHead-184d9b73-00f3-42e6-8661-ef5119d872b3">
+                    <div class="panel-group" id="collapse-request-54f890a7-b2a6-4ed4-abb4-f51c935efe72" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-54f890a7-b2a6-4ed4-abb4-f51c935efe72">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-54f890a7-b2a6-4ed4-abb4-f51c935efe72" aria-controls="collapseOne">GET - People by ID</a></h4>
+                            </div>
+            
+                            <div id="requestData-54f890a7-b2a6-4ed4-abb4-f51c935efe72" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-54f890a7-b2a6-4ed4-abb4-f51c935efe72">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/people/1" target="_blank">https://swapi.py4e.com/api/people/1</a></div>
+            
                                     <div class="col-md-12">&nbsp;</div>
-                                    <div class="col-md-4">Tests</div>
-        
-                                    <div class="col-md-8">
-                                        <table class="table table-responsive table-condensed">
-                                            <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
-                                            <tbody><tr><td>Status code is 200</td><td>1</td><td>0</td></tr><tr><td>Response time is less than 500ms</td><td>1</td><td>0</td></tr><tr><td>Body contains name</td><td>1</td><td>0</td></tr></tbody>
-                                        </table>
-                                    </div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">169ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">774B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">3</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 200</td><td>1</td><td>0</td></tr><tr><td>Response time is less than 800ms</td><td>1</td><td>0</td></tr><tr><td>Body contains name</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="panel-group" id="collapse-request-ed8418c9-45b1-4a13-b8f4-d509d2d93828" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-ed8418c9-45b1-4a13-b8f4-d509d2d93828">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-ed8418c9-45b1-4a13-b8f4-d509d2d93828" aria-controls="collapseOne">GET - People by Invalid Format (abc)</a></h4>
+                            </div>
+            
+                            <div id="requestData-ed8418c9-45b1-4a13-b8f4-d509d2d93828" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-ed8418c9-45b1-4a13-b8f4-d509d2d93828">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/people/abc" target="_blank">https://swapi.py4e.com/api/people/abc</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">596ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">22B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">1</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">404</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 404 or 400</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-164850ae-8134-469d-9ac8-6e4d537ea103" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-164850ae-8134-469d-9ac8-6e4d537ea103">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-164850ae-8134-469d-9ac8-6e4d537ea103" aria-controls="collapseOne">GET - People by Invalid ID</a></h4>
+                            </div>
+            
+                            <div id="requestData-164850ae-8134-469d-9ac8-6e4d537ea103" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-164850ae-8134-469d-9ac8-6e4d537ea103">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/people/9999" target="_blank">https://swapi.py4e.com/api/people/9999</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">599ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">22B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">1</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">404</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 404</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-c0360def-a0a2-4af8-a14a-ae9e38405b86" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-c0360def-a0a2-4af8-a14a-ae9e38405b86">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-c0360def-a0a2-4af8-a14a-ae9e38405b86" aria-controls="collapseOne"> GET – Homeworld by URL</a></h4>
+                            </div>
+            
+                            <div id="requestData-c0360def-a0a2-4af8-a14a-ae9e38405b86" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-c0360def-a0a2-4af8-a14a-ae9e38405b86">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/planets/1/" target="_blank">https://swapi.py4e.com/api/planets/1/</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">446ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">917B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">2</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 200</td><td>1</td><td>0</td></tr><tr><td>Body contains name</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="panel-group" id="collapse-folder-c39bdd98-5dcb-4d41-9a56-dbecc9bd1665" role="tablist" aria-multiselectable="true">
+            <div role="tab" id="folderHead-c39bdd98-5dcb-4d41-9a56-dbecc9bd1665">
+                <h4 style="font-size: 18px;" class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#folderData-c39bdd98-5dcb-4d41-9a56-dbecc9bd1665" aria-controls="collapseOne"><strong>Planets</strong></a></h4>
+            </div>
+            <br/>
+            <div id="folderData-c39bdd98-5dcb-4d41-9a56-dbecc9bd1665" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="folderHead-c39bdd98-5dcb-4d41-9a56-dbecc9bd1665">
+                    <div class="panel-group" id="collapse-request-51b6e2bb-451d-41b7-8710-8518e8a49d9f" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-51b6e2bb-451d-41b7-8710-8518e8a49d9f">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-51b6e2bb-451d-41b7-8710-8518e8a49d9f" aria-controls="collapseOne">GET - Planet by ID</a></h4>
+                            </div>
+            
+                            <div id="requestData-51b6e2bb-451d-41b7-8710-8518e8a49d9f" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-51b6e2bb-451d-41b7-8710-8518e8a49d9f">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/planets/1" target="_blank">https://swapi.py4e.com/api/planets/1</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">457ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">917B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">4</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 200</td><td>1</td><td>0</td></tr><tr><td>Response time is less than 500ms</td><td>1</td><td>0</td></tr><tr><td>Body contains name</td><td>1</td><td>0</td></tr><tr><td>Body contains climate</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-708aad74-1753-4796-94ae-6216dde2b1be" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-708aad74-1753-4796-94ae-6216dde2b1be">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-708aad74-1753-4796-94ae-6216dde2b1be" aria-controls="collapseOne">GET - Planet by Invalid ID</a></h4>
+                            </div>
+            
+                            <div id="requestData-708aad74-1753-4796-94ae-6216dde2b1be" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-708aad74-1753-4796-94ae-6216dde2b1be">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/planets/9999" target="_blank">https://swapi.py4e.com/api/planets/9999</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">557ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">22B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">1</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">404</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 404</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-3fbb0b6e-6c5a-4997-8e78-bd3f3f19b34f" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-3fbb0b6e-6c5a-4997-8e78-bd3f3f19b34f">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-3fbb0b6e-6c5a-4997-8e78-bd3f3f19b34f" aria-controls="collapseOne">GET - Planet by Invalid Format (null)</a></h4>
+                            </div>
+            
+                            <div id="requestData-3fbb0b6e-6c5a-4997-8e78-bd3f3f19b34f" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-3fbb0b6e-6c5a-4997-8e78-bd3f3f19b34f">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/planets/null" target="_blank">https://swapi.py4e.com/api/planets/null</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">596ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">22B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">1</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">404</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 404 or 400</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="panel-group" id="collapse-folder-8b96100d-d047-4413-96bd-4d7e52a64cd1" role="tablist" aria-multiselectable="true">
+            <div role="tab" id="folderHead-8b96100d-d047-4413-96bd-4d7e52a64cd1">
+                <h4 style="font-size: 18px;" class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#folderData-8b96100d-d047-4413-96bd-4d7e52a64cd1" aria-controls="collapseOne"><strong>Films</strong></a></h4>
+            </div>
+            <br/>
+            <div id="folderData-8b96100d-d047-4413-96bd-4d7e52a64cd1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="folderHead-8b96100d-d047-4413-96bd-4d7e52a64cd1">
+                    <div class="panel-group" id="collapse-request-0f883174-1a26-4975-9de5-a779493d7822" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-0f883174-1a26-4975-9de5-a779493d7822">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-0f883174-1a26-4975-9de5-a779493d7822" aria-controls="collapseOne">GET - Film by ID</a></h4>
+                            </div>
+            
+                            <div id="requestData-0f883174-1a26-4975-9de5-a779493d7822" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-0f883174-1a26-4975-9de5-a779493d7822">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/films/1" target="_blank">https://swapi.py4e.com/api/films/1</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">351ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">2.38KB</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">4</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 200</td><td>1</td><td>0</td></tr><tr><td>Response time is less than 800ms</td><td>1</td><td>0</td></tr><tr><td>Body contains title</td><td>1</td><td>0</td></tr><tr><td>Body contains director</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-fa343233-e330-4bbc-a47d-686fabcfbd81" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-fa343233-e330-4bbc-a47d-686fabcfbd81">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-fa343233-e330-4bbc-a47d-686fabcfbd81" aria-controls="collapseOne">GET - Film by Invalid ID</a></h4>
+                            </div>
+            
+                            <div id="requestData-fa343233-e330-4bbc-a47d-686fabcfbd81" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-fa343233-e330-4bbc-a47d-686fabcfbd81">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/films/9999" target="_blank">https://swapi.py4e.com/api/films/9999</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">589ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">22B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">1</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">404</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 404</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-52bbbbf3-8c55-42e9-86dc-8f6e64a96641" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-52bbbbf3-8c55-42e9-86dc-8f6e64a96641">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-52bbbbf3-8c55-42e9-86dc-8f6e64a96641" aria-controls="collapseOne">GET - Film by Invalid Format (!@#)</a></h4>
+                            </div>
+            
+                            <div id="requestData-52bbbbf3-8c55-42e9-86dc-8f6e64a96641" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-52bbbbf3-8c55-42e9-86dc-8f6e64a96641">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/films/!@#" target="_blank">https://swapi.py4e.com/api/films/!@#</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">567ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">22B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">1</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">404</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 404 or 400</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="panel-group" id="collapse-folder-6cd87bc6-7d82-4503-a530-0618dab0da38" role="tablist" aria-multiselectable="true">
+            <div role="tab" id="folderHead-6cd87bc6-7d82-4503-a530-0618dab0da38">
+                <h4 style="font-size: 18px;" class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#folderData-6cd87bc6-7d82-4503-a530-0618dab0da38" aria-controls="collapseOne"><strong>Starships</strong></a></h4>
+            </div>
+            <br/>
+            <div id="folderData-6cd87bc6-7d82-4503-a530-0618dab0da38" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="folderHead-6cd87bc6-7d82-4503-a530-0618dab0da38">
+                    <div class="panel-group" id="collapse-request-141f6de5-9a0c-4106-9f45-76a34d75a830" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-141f6de5-9a0c-4106-9f45-76a34d75a830">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-141f6de5-9a0c-4106-9f45-76a34d75a830" aria-controls="collapseOne">GET - Starship by ID</a></h4>
+                            </div>
+            
+                            <div id="requestData-141f6de5-9a0c-4106-9f45-76a34d75a830" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-141f6de5-9a0c-4106-9f45-76a34d75a830">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/starships/2" target="_blank">https://swapi.py4e.com/api/starships/2</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">610ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">587B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">3</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 200</td><td>1</td><td>0</td></tr><tr><td>Body contains name</td><td>1</td><td>0</td></tr><tr><td>Body contains model</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-9a11d618-0e78-499b-9561-c97bd568a4aa" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-9a11d618-0e78-499b-9561-c97bd568a4aa">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-9a11d618-0e78-499b-9561-c97bd568a4aa" aria-controls="collapseOne">GET - Starship by Invalid ID</a></h4>
+                            </div>
+            
+                            <div id="requestData-9a11d618-0e78-499b-9561-c97bd568a4aa" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-9a11d618-0e78-499b-9561-c97bd568a4aa">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/starships/9999" target="_blank">https://swapi.py4e.com/api/starships/9999</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">598ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">22B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">1</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">404</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 404</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-3fd100fc-9c3c-40d3-9475-deb950855577" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-3fd100fc-9c3c-40d3-9475-deb950855577">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-3fd100fc-9c3c-40d3-9475-deb950855577" aria-controls="collapseOne">GET - Starship by Chained URL</a></h4>
+                            </div>
+            
+                            <div id="requestData-3fd100fc-9c3c-40d3-9475-deb950855577" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-3fd100fc-9c3c-40d3-9475-deb950855577">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/starships/12/" target="_blank">https://swapi.py4e.com/api/starships/12/</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">295ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">714B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">2</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 200</td><td>1</td><td>0</td></tr><tr><td>Body contains name</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="panel-group" id="collapse-folder-d6d94d16-7a2f-4df5-8982-319a799b0965" role="tablist" aria-multiselectable="true">
+            <div role="tab" id="folderHead-d6d94d16-7a2f-4df5-8982-319a799b0965">
+                <h4 style="font-size: 18px;" class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#folderData-d6d94d16-7a2f-4df5-8982-319a799b0965" aria-controls="collapseOne"><strong>Vehicles</strong></a></h4>
+            </div>
+            <br/>
+            <div id="folderData-d6d94d16-7a2f-4df5-8982-319a799b0965" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="folderHead-d6d94d16-7a2f-4df5-8982-319a799b0965">
+                    <div class="panel-group" id="collapse-request-d0eb11f6-2aff-4a3e-b00c-59519a3190f6" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-d0eb11f6-2aff-4a3e-b00c-59519a3190f6">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-d0eb11f6-2aff-4a3e-b00c-59519a3190f6" aria-controls="collapseOne">GET - Vehicle by ID</a></h4>
+                            </div>
+            
+                            <div id="requestData-d0eb11f6-2aff-4a3e-b00c-59519a3190f6" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-d0eb11f6-2aff-4a3e-b00c-59519a3190f6">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/vehicles/4" target="_blank">https://swapi.py4e.com/api/vehicles/4</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">577ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">497B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">3</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 200</td><td>1</td><td>0</td></tr><tr><td>Body contains name</td><td>1</td><td>0</td></tr><tr><td>Body contains model</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-406380cf-6790-431d-91a5-0cbda84a4620" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-406380cf-6790-431d-91a5-0cbda84a4620">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-406380cf-6790-431d-91a5-0cbda84a4620" aria-controls="collapseOne">GET - Vehicle by Invalid ID</a></h4>
+                            </div>
+            
+                            <div id="requestData-406380cf-6790-431d-91a5-0cbda84a4620" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-406380cf-6790-431d-91a5-0cbda84a4620">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/vehicles/9999" target="_blank">https://swapi.py4e.com/api/vehicles/9999</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">584ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">22B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">1</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">404</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 404</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="panel-group" id="collapse-folder-673c82b9-f1e0-4c75-8b37-99170d8d3c21" role="tablist" aria-multiselectable="true">
+            <div role="tab" id="folderHead-673c82b9-f1e0-4c75-8b37-99170d8d3c21">
+                <h4 style="font-size: 18px;" class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#folderData-673c82b9-f1e0-4c75-8b37-99170d8d3c21" aria-controls="collapseOne"><strong>Species</strong></a></h4>
+            </div>
+            <br/>
+            <div id="folderData-673c82b9-f1e0-4c75-8b37-99170d8d3c21" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="folderHead-673c82b9-f1e0-4c75-8b37-99170d8d3c21">
+                    <div class="panel-group" id="collapse-request-366f6987-f7a2-4c49-90cc-591dcb0593b7" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-366f6987-f7a2-4c49-90cc-591dcb0593b7">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-366f6987-f7a2-4c49-90cc-591dcb0593b7" aria-controls="collapseOne">GET - Species by ID</a></h4>
+                            </div>
+            
+                            <div id="requestData-366f6987-f7a2-4c49-90cc-591dcb0593b7" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-366f6987-f7a2-4c49-90cc-591dcb0593b7">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/species/1" target="_blank">https://swapi.py4e.com/api/species/1</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">472ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">2.1KB</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">4</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 200</td><td>1</td><td>0</td></tr><tr><td>Response time is less than 500ms</td><td>1</td><td>0</td></tr><tr><td>Body contains name</td><td>1</td><td>0</td></tr><tr><td>Body contains classification</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-ad3e2f2b-9c0e-4e82-adcc-89a5b15fe393" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-ad3e2f2b-9c0e-4e82-adcc-89a5b15fe393">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-ad3e2f2b-9c0e-4e82-adcc-89a5b15fe393" aria-controls="collapseOne">GET - Species by Invalid ID</a></h4>
+                            </div>
+            
+                            <div id="requestData-ad3e2f2b-9c0e-4e82-adcc-89a5b15fe393" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-ad3e2f2b-9c0e-4e82-adcc-89a5b15fe393">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/species/9999" target="_blank">https://swapi.py4e.com/api/species/9999</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">571ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">22B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">1</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">404</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 404</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="panel-group" id="collapse-folder-e1507b0f-a788-48ca-8735-2df5346bdf72" role="tablist" aria-multiselectable="true">
+            <div role="tab" id="folderHead-e1507b0f-a788-48ca-8735-2df5346bdf72">
+                <h4 style="font-size: 18px;" class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#folderData-e1507b0f-a788-48ca-8735-2df5346bdf72" aria-controls="collapseOne"><strong>Mock REST Tests</strong></a></h4>
+            </div>
+            <br/>
+            <div id="folderData-e1507b0f-a788-48ca-8735-2df5346bdf72" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="folderHead-e1507b0f-a788-48ca-8735-2df5346bdf72">
+                    <div class="panel-group" id="collapse-request-8e97ce41-9e05-4015-be81-5d5dfcf93a08" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-8e97ce41-9e05-4015-be81-5d5dfcf93a08">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-8e97ce41-9e05-4015-be81-5d5dfcf93a08" aria-controls="collapseOne">POST - Create Person (mock)</a></h4>
+                            </div>
+            
+                            <div id="requestData-8e97ce41-9e05-4015-be81-5d5dfcf93a08" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-8e97ce41-9e05-4015-be81-5d5dfcf93a08">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">POST</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://jsonplaceholder.typicode.com/users" target="_blank">https://jsonplaceholder.typicode.com/users</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">408ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">101B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">2</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">201</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 201</td><td>1</td><td>0</td></tr><tr><td>Response contains created ID</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-1636a495-7e5f-4f67-8145-af0ea24baa2a" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-1636a495-7e5f-4f67-8145-af0ea24baa2a">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-1636a495-7e5f-4f67-8145-af0ea24baa2a" aria-controls="collapseOne">PUT - Update Person (mock)</a></h4>
+                            </div>
+            
+                            <div id="requestData-1636a495-7e5f-4f67-8145-af0ea24baa2a" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-1636a495-7e5f-4f67-8145-af0ea24baa2a">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">PUT</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://jsonplaceholder.typicode.com/users/1" target="_blank">https://jsonplaceholder.typicode.com/users/1</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">363ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">107B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">2</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 200</td><td>1</td><td>0</td></tr><tr><td>Updated name is correct</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-a0475e78-8785-4bc1-aa3b-2b9320890324" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-a0475e78-8785-4bc1-aa3b-2b9320890324">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-a0475e78-8785-4bc1-aa3b-2b9320890324" aria-controls="collapseOne">DELETE - Delete Person (mock)</a></h4>
+                            </div>
+            
+                            <div id="requestData-a0475e78-8785-4bc1-aa3b-2b9320890324" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-a0475e78-8785-4bc1-aa3b-2b9320890324">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">DELETE</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://jsonplaceholder.typicode.com/users/1" target="_blank">https://jsonplaceholder.typicode.com/users/1</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">132ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">2B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">2</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 200 or 204</td><td>1</td><td>0</td></tr><tr><td>Body is empty</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-ef93c1fb-4501-4533-81e7-996e8731f091" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-ef93c1fb-4501-4533-81e7-996e8731f091">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-ef93c1fb-4501-4533-81e7-996e8731f091" aria-controls="collapseOne">POST - Invalid Payload (mock)</a></h4>
+                            </div>
+            
+                            <div id="requestData-ef93c1fb-4501-4533-81e7-996e8731f091" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-ef93c1fb-4501-4533-81e7-996e8731f091">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">POST</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://jsonplaceholder.typicode.com/users" target="_blank">https://jsonplaceholder.typicode.com/users</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">361ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">48B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">1</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">201</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>API should ideally reject malformed payload, but accepted it</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="panel-group" id="collapse-folder-0cafa530-5b5b-4914-8eb6-b2feb0070b05" role="tablist" aria-multiselectable="true">
+            <div role="tab" id="folderHead-0cafa530-5b5b-4914-8eb6-b2feb0070b05">
+                <h4 style="font-size: 18px;" class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#folderData-0cafa530-5b5b-4914-8eb6-b2feb0070b05" aria-controls="collapseOne"><strong>Chaining Tests</strong></a></h4>
+            </div>
+            <br/>
+            <div id="folderData-0cafa530-5b5b-4914-8eb6-b2feb0070b05" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="folderHead-0cafa530-5b5b-4914-8eb6-b2feb0070b05">
+                    <div class="panel-group" id="collapse-request-6a3fc3c4-b1a0-4e4a-9bbb-b8c32b59dbee" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-6a3fc3c4-b1a0-4e4a-9bbb-b8c32b59dbee">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-6a3fc3c4-b1a0-4e4a-9bbb-b8c32b59dbee" aria-controls="collapseOne">GET - Species by ID (from Person)</a></h4>
+                            </div>
+            
+                            <div id="requestData-6a3fc3c4-b1a0-4e4a-9bbb-b8c32b59dbee" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-6a3fc3c4-b1a0-4e4a-9bbb-b8c32b59dbee">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/species/%7B%7BspeciesIdFromPerson%7D%7D" target="_blank">https://swapi.py4e.com/api/species/%7B%7BspeciesIdFromPerson%7D%7D</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">568ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">22B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">0</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">404</div><br/>
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-f4b0b79f-3d5e-4714-94c9-3899ca041a8e" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-f4b0b79f-3d5e-4714-94c9-3899ca041a8e">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-f4b0b79f-3d5e-4714-94c9-3899ca041a8e" aria-controls="collapseOne">GET - Person with Species</a></h4>
+                            </div>
+            
+                            <div id="requestData-f4b0b79f-3d5e-4714-94c9-3899ca041a8e" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-f4b0b79f-3d5e-4714-94c9-3899ca041a8e">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/people/1" target="_blank">https://swapi.py4e.com/api/people/1</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">36ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">774B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">0</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-7d3b78ef-db10-4f77-bb60-3fbd5779cab3" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-7d3b78ef-db10-4f77-bb60-3fbd5779cab3">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-7d3b78ef-db10-4f77-bb60-3fbd5779cab3" aria-controls="collapseOne">GET - Film with Characters</a></h4>
+                            </div>
+            
+                            <div id="requestData-7d3b78ef-db10-4f77-bb60-3fbd5779cab3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-7d3b78ef-db10-4f77-bb60-3fbd5779cab3">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/films/1" target="_blank">https://swapi.py4e.com/api/films/1</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">204ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">2.38KB</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">0</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-0950a5cd-8032-4cb7-bdb3-657907d96696" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="requestHead-0950a5cd-8032-4cb7-bdb3-657907d96696">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-0950a5cd-8032-4cb7-bdb3-657907d96696" aria-controls="collapseOne">GET - Character by ID (from Film)</a></h4>
+                            </div>
+            
+                            <div id="requestData-0950a5cd-8032-4cb7-bdb3-657907d96696" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="requestHead-0950a5cd-8032-4cb7-bdb3-657907d96696">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8">GET</div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://swapi.py4e.com/api/people/1" target="_blank">https://swapi.py4e.com/api/people/1</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">37ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">774B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="col-md-8">2</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Status code is 200</td><td>1</td><td>0</td></tr><tr><td>Character has name</td><td>1</td><td>0</td></tr></tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
 
   </div>
 </body>
