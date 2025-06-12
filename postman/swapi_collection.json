@@ -994,6 +994,87 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "GET - Film with Characters",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData = pm.response.json();\r",
+									"const characterUrl = jsonData.characters[0]; // ex: \"https://.../people/1/\"\r",
+									"\r",
+									"if (characterUrl) {\r",
+									"    const match = characterUrl.match(/people\\/(\\d+)/);\r",
+									"    if (match) {\r",
+									"        const characterId = match[1];\r",
+									"        pm.environment.set(\"characterIdFromFilm\", characterId);\r",
+									"        console.log(\"✅ characterIdFromFilm:\", characterId);\r",
+									"    } else {\r",
+									"        console.warn(\"⚠️ Could not extract character ID from URL.\");\r",
+									"    }\r",
+									"} else {\r",
+									"    console.warn(\"⚠️ No characters[] found in film response.\");\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/films/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"films",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Character by ID (from Film)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Character has name\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.name).to.be.a(\"string\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/people/{{characterIdFromFilm}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"people",
+								"{{characterIdFromFilm}}"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
