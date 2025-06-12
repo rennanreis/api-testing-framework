@@ -2,7 +2,7 @@
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
 ![Status: Portfolio](https://img.shields.io/badge/status-portfolio-blue)
-![Last Update](https://img.shields.io/badge/last%20update-June%202025-brightgreen)
+![Last Update](https://img.shields.io/badge/last_update-June_2025-brightgreen)
 
 > ⚠️ This project is part of a personal portfolio and is not open to external contributions (pull requests or issues) at this time.
 
@@ -54,6 +54,8 @@ api-testing-framework/
 |             | Negative    | GET with invalid format (`/people/abc`)               | ✅     |
 |             | Chaining    | GET homeworld by URL from person                      | ✅     |
 |             | Chaining    | GET starship by URL from person                       | ✅     |
+|             | Chaining    | GET species by URL from person                        | ✅     |
+|             | Chaining    | GET person by character URL from film                 | ✅     |
 | Planets     | Positive    | GET by valid ID (`/planets/1`)                        | ✅     |
 |             | Negative    | GET by invalid ID (`/planets/9999`)                   | ✅     |
 |             | Negative    | GET with invalid format (`/planets/null`)             | ✅     |
@@ -62,13 +64,15 @@ api-testing-framework/
 |             | Negative    | GET with invalid format (`/films/!@#`)                | ✅     |
 | Starships   | Positive    | GET by valid ID (`/starships/9`)                      | ✅     |
 |             | Negative    | GET by invalid ID (`/starships/9999`)                 | ✅     |
-|             | Chaining    | GET starship from people endpoint                     | ✅     |
+|             | Chaining    | GET starship by URL from person                       | ✅     |
 | Vehicles    | Positive    | GET by valid ID (`/vehicles/4`)                       | ✅     |
 |             | Negative    | GET by invalid ID (`/vehicles/9999`)                  | ✅     |
 | Species     | Positive    | GET by valid ID (`/species/1`)                        | ✅     |
 |             | Negative    | GET by invalid ID (`/species/9999`)                   | ✅     |
-
-> Simulated POST, PUT, DELETE and advanced chaining scenarios will be added next.
+| Mock        | Positive    | POST new person (mock)                                | ✅     |
+|             | Positive    | PUT update person (mock)                              | ✅     |
+|             | Positive    | DELETE person (mock)                                  | ✅     |
+|             | Educational | POST with invalid payload (mock)                      | ✅     |
 
 ---
 
@@ -77,11 +81,12 @@ api-testing-framework/
 - Clean and modular Postman collection organized by resource
 - Use of environments with dynamic variables for flexible configuration
 - Coverage for happy path, invalid IDs, and malformed parameters
-- Chaining of related resources using data from previous responses
+- Chaining of related resources using data from previous responses (people → starships, species, etc.)
+- Simulation of POST, PUT, DELETE using mock services (JSONPlaceholder)
+- Educational test covering acceptance of invalid input by public APIs
 - Newman integration for CLI-based test execution
 - HTML report generation with `newman-reporter-html`
 - Test naming and commit history follow Conventional Commits
-- README and test structure optimized for QA portfolios and articles
 
 ---
 
@@ -90,11 +95,11 @@ api-testing-framework/
 - ✅ Postman collection created and organized
 - ✅ Test coverage for all primary SWAPI resources (`GET`)
 - ✅ Negative tests for invalid IDs and malformed inputs
-- ✅ Chaining between people, homeworlds, and starships
+- ✅ Chaining between people, homeworlds, starships, species and film characters
+- ✅ Simulated POST, PUT, DELETE requests (mock)
+- ✅ Educational test for invalid payload
 - ✅ Newman execution and HTML reporting in place
 - ✅ README fully documented with project context
-- 🔄 Next: implement simulated POST, PUT, DELETE requests (mock)
-- 🔄 Next: advanced chaining with species and film characters
 - 🔄 Final step: GitHub Actions CI/CD integration
 
 ---
@@ -102,7 +107,7 @@ api-testing-framework/
 ## 🎯 About
 
 This project was created as part of a self-study portfolio in API testing.  
-It focuses on delivering reliable, maintainable, and automatable test coverage for RESTful APIs, mimicking real-world test automation practices in microservices architecture.
+It focuses on delivering **reliable**, **maintainable**, and **automatable** test coverage for RESTful APIs, mimicking real-world test automation practices in microservices architecture.
 
 ---
 
