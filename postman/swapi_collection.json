@@ -929,6 +929,73 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Chaining Tests",
+			"item": [
+				{
+					"name": "GET - Species by ID (from Person)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/species/{{speciesIdFromPerson}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"species",
+								"{{speciesIdFromPerson}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Person with Species",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData = pm.response.json();\r",
+									"const speciesUrl = jsonData.species[0]; // ex: \"https://swapi.py4e.com/api/species/1/\"\r",
+									"\r",
+									"if (speciesUrl) {\r",
+									"    const match = speciesUrl.match(/species\\/(\\d+)/);\r",
+									"    if (match) {\r",
+									"        const speciesId = match[1];\r",
+									"        pm.environment.set(\"speciesIdFromPerson\", speciesId);\r",
+									"        console.log(\"✅ speciesIdFromPerson:\", speciesId);\r",
+									"    } else {\r",
+									"        console.warn(\"⚠️ Could not extract species ID from URL.\");\r",
+									"    }\r",
+									"} else {\r",
+									"    console.warn(\"⚠️ No species[] found in response.\");\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/people/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"people",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
