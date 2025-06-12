@@ -3,6 +3,8 @@
 ![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
 ![Status: Portfolio](https://img.shields.io/badge/status-portfolio-blue)
 ![Last Update](https://img.shields.io/badge/last_update-June_2025-brightgreen)
+![CI](https://github.com/rennanreis/api-testing-framework/actions/workflows/api-tests.yml/badge.svg)
+
 
 > ⚠️ This project is part of a personal portfolio and is not open to external contributions (pull requests or issues) at this time.
 
@@ -100,7 +102,7 @@ api-testing-framework/
 - ✅ Educational test for invalid payload
 - ✅ Newman execution and HTML reporting in place
 - ✅ README fully documented with project context
-- 🔄 Final step: GitHub Actions CI/CD integration
+- ✅ Final step: GitHub Actions CI/CD integration
 
 ---
 
